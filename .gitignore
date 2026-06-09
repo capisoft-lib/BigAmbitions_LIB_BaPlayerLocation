@@ -1,0 +1,22 @@
+# Unity / IDE
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Build output (if built outside the SDK Mod Builder)
+Output/
+bin/
+obj/

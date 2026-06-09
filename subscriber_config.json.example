@@ -1,0 +1,5 @@
+{
+  "position_threshold_m": 0.5,
+  "heading_threshold_deg": 2.0,
+  "speed_threshold_mps": 0.5
+}

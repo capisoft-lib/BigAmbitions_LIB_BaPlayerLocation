@@ -1,0 +1,22 @@
+{
+  "name": "Example-Consumer-Mod",
+  "rootNamespace": "",
+  "references": [
+    "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+    "GUID:c7d8e9f0a1b243c5d6e7f8091a2b3c4d"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "BigAmbitions.ModAPI.dll",
+    "BigAmbitions.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "BA_GAME_DLLS_IMPORTED"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
