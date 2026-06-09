@@ -15,8 +15,9 @@ namespace BaPlayerLocation.Subscriber
 
         public Task OnLoadAsync(ModContext context)
         {
-            _ = context;
-            ModLog.Info("Loading subscriber library.");
+            ModStoragePaths.Initialize(context);
+            ModLog.Info(
+                "Loading subscriber library | mod_root=" + ModStoragePaths.ModRootDirectory);
 
             SubscriberConfig.Load().Apply();
             PlayerLocationSubscriber.Initialize();
@@ -41,6 +42,7 @@ namespace BaPlayerLocation.Subscriber
 
             PlayerLocationSubscriber.Shutdown();
             SubscriberThresholds.ResetToDefaults();
+            ModStoragePaths.Shutdown();
             ModLog.Info("Subscriber library unloaded.");
             return Task.CompletedTask;
         }

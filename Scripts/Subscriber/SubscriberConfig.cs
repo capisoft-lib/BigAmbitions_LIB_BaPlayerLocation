@@ -14,11 +14,12 @@ namespace BaPlayerLocation.Subscriber
         internal static SubscriberConfig Load()
         {
             var config = new SubscriberConfig();
-            var path = ModStoragePaths.ConfigFilePath;
+            var path = ResolveConfigReadPath();
 
-            if (!File.Exists(path))
+            if (path == null)
             {
-                ModLog.Info("Config not found (using defaults): " + path);
+                ModLog.Info(
+                    "Config not found (using defaults) | mod_root=" + ModStoragePaths.ModRootDirectory);
                 config.LogThresholds();
                 return config;
             }
@@ -59,6 +60,19 @@ namespace BaPlayerLocation.Subscriber
         internal void Apply()
         {
             SubscriberThresholds.Apply(PositionThresholdM, HeadingThresholdDeg, SpeedThresholdMps);
+        }
+
+        private static string ResolveConfigReadPath()
+        {
+            var configPath = ModStoragePaths.ConfigFilePath;
+            if (File.Exists(configPath))
+                return configPath;
+
+            var examplePath = ModStoragePaths.PathInModRoot(ModStoragePaths.ShippedConfigExampleFileName);
+            if (File.Exists(examplePath))
+                return examplePath;
+
+            return null;
         }
 
         private static float ClampPositive(float value, float fallback)

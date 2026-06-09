@@ -119,13 +119,15 @@ Movement mode or place changes always trigger a notification. Position, heading,
 
 The official SDK provides `OptionsService` for in-game mod settings (see `Example-Options`). That API uses integer sliders and is suited to player-facing toggles.
 
-This library uses a **JSON file in `ModsLocal`** instead — same pattern as other telemetry mods, and better for sub-meter float thresholds.
+This library uses a **JSON file in the mod root** (`ModContext.ModRootPath`) instead — same pattern as other telemetry mods, and better for sub-meter float thresholds.
 
-Copy `subscriber_config.json.example` to:
+Copy `subscriber_config.json.example` to `subscriber_config.json` next to the mod content. For a local SDK install in `ModsLocal`:
 
 ```text
-%USERPROFILE%\AppData\LocalLow\...\BigAmbitions\ModsLocal\LIB_BaPlayerLocation\subscriber_config.json
+%USERPROFILE%\AppData\LocalLow\Hovgaard Games\Big Ambitions\ModsLocal\LIB_BaPlayerLocation\subscriber_config.json
 ```
+
+Steam Workshop installs use the subscribed mod folder automatically.
 
 ```json
 {
