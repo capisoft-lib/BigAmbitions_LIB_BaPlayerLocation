@@ -39,17 +39,19 @@ Ship this mod with any consumer mod that uses the API (players must have both en
 
 ## Consumer mod setup (compile-time)
 
-Add an asmdef reference to this library. Stable GUID:
+Add asmdef references to the Mod API and this library:
 
-```text
-c7d8e9f0a1b243c5d6e7f8091a2b3c4d
-```
+| Assembly | GUID |
+|----------|------|
+| Mod API (SDK) | `776d03a35f1b52c4a9aed9f56d7b4229` |
+| LIB_BaPlayerLocation | `c7d8e9f0a1b243c5d6e7f8091a2b3c4d` |
 
-In your mod's `.asmdef`:
+In your mod's `.asmdef` (see `templates/Example-Consumer-Mod/Example-Consumer-Mod.asmdef` for a full file):
 
 ```json
 {
   "references": [
+    "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
     "GUID:c7d8e9f0a1b243c5d6e7f8091a2b3c4d"
   ]
 }

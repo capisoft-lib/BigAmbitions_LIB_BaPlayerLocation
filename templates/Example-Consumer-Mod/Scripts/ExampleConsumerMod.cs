@@ -19,16 +19,7 @@ namespace ExampleConsumer
         {
             _ = context;
 
-            _locationSubscription = PlayerLocationSubscriber.SubscribeWhenActive(snapshot =>
-            {
-                if (!snapshot.IsAvailable)
-                    return;
-
-                Debug.Log(
-                    $"[ExampleConsumer] {MovementKindLabels.ToLabel(snapshot.MovementKind)} " +
-                    $"pos={snapshot.Position} heading={snapshot.HeadingDeg:F0} place={snapshot.Place}");
-            });
-
+            _locationSubscription = PlayerLocationSubscriber.SubscribeWhenActive(OnPlayerLocationChanged);
             return Task.CompletedTask;
         }
 
@@ -37,6 +28,16 @@ namespace ExampleConsumer
             _locationSubscription?.Dispose();
             _locationSubscription = null;
             return Task.CompletedTask;
+        }
+
+        private void OnPlayerLocationChanged(PlayerLocationSnapshot snapshot)
+        {
+            if (!snapshot.IsAvailable)
+                return;
+
+            Debug.Log(
+                $"[ExampleConsumer] {MovementKindLabels.ToLabel(snapshot.MovementKind)} " +
+                $"pos={snapshot.Position} heading={snapshot.HeadingDeg:F0} place={snapshot.Place}");
         }
     }
 }
