@@ -15,7 +15,7 @@ MonoBehaviour:
   ModId: LIB_BaPlayerLocation
   DisplayName: LIB BA Player Location
   Author: capisoft-lib
-  Version: 0.11.1
+  Version: 0.11.2
   AssetBundleName: 
   ModAssembly: {fileID: 5897886265953266890, guid: c7d8e9f0a1b243c5d6e7f8091a2b3c4d, type: 3}
   LocalesFolder: {fileID: 0}

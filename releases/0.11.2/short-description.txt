@@ -1,0 +1,1 @@
+Shared player location and movement-state library for Big Ambitions mods. Reports walking, driving, indoor and subway states through a stable subscriber API.

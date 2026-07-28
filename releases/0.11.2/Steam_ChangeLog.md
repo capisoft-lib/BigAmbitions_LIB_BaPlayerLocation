@@ -1,0 +1,3 @@
+- Fixed flatbed and hand truck detection: pushed cargo tools now count as walking, not driving
+- Prevents consumer mods from offering auto-drive or teleporting delivery cargo
+- Player position and heading remain correct while pushing delivery equipment

@@ -88,8 +88,18 @@ namespace BaPlayerLocation.Subscriber
 
             try
             {
-                if (GameManager.IsInitialized && GameManager.Instance?.selectedVehicle != null)
-                    return MovementKind.Car;
+                var selectedVehicle = GameManager.IsInitialized ? GameManager.Instance?.selectedVehicle : null;
+                if (selectedVehicle != null)
+                {
+                    // A hand truck / flatbed also sets selectedVehicle, but those are
+                    // spawnInPlayerObject cargo tools parented to the player's hands: the
+                    // player is walking, not driving. Reporting Car would make consumers
+                    // teleport the tool away from the player (lost cargo, IK glitches).
+                    // Treat them as Walk so the player position/heading drive navigation.
+                    var vehicleType = selectedVehicle.vehicleType;
+                    if (vehicleType == null || !vehicleType.spawnInPlayerObject)
+                        return MovementKind.Car;
+                }
             }
             catch
             {
