@@ -1,0 +1,4 @@
+- Released LIB BA Player Location 1.0.0 as one package for Big Ambitions EA 0.11 and 1.0 experimental
+- Kept the existing assembly identity and subscriber API for current consumer mods
+- Retained safe walking classification for flatbeds and hand trucks
+- Built through Unity 2022.3.62f2 and the official Big Ambitions Mod Builder

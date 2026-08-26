@@ -1,0 +1,1 @@
+Shared player-location and movement-state library for Big Ambitions EA 0.11 and 1.0 experimental. Required by compatible mods such as Voogle Route.

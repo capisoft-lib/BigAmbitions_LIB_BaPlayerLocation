@@ -15,3 +15,11 @@ This is a dependency used by mods such as Voogle Route. Subscribe to it and enab
 [b]For mod developers[/b]
 
 Use the included subscriber API to receive player position, heading, speed and movement kind without probing game internals independently.
+
+[b]Support the developer ☕[/b]
+
+If this library has helped your favorite mods find where the player wandered off to, you can support its development by buying me a coffee:
+
+[url=https://buymeacoffee.com/capitaine]☕ Buy me a coffee[/url]
+
+The coordinates stay precise; the developer is less reliable without caffeine.

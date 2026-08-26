@@ -1,6 +1,6 @@
 # LIB_BaPlayerLocation
 
-Big Ambitions **library mod** (EA 0.11+) that exposes live player location to other mods:
+Big Ambitions **library mod** for EA 0.11 and 1.0 experimental that exposes live player location to other mods:
 
 - position, heading, speed
 - movement mode (`Indoor`, `Walk`, `Car`, `Subway`, `Unavailable`)
@@ -8,9 +8,12 @@ Big Ambitions **library mod** (EA 0.11+) that exposes live player location to ot
 
 Notifications fire **only on significant change** (not every frame).
 
+> ☕ If this library has helped your mods find where the player wandered off to, [buy me a coffee](https://buymeacoffee.com/capitaine). The coordinates stay precise; the developer is less reliable without caffeine.
+
 | Property | Value |
 |----------|-------|
-| **Game** | Big Ambitions EA **0.11 Experimental** |
+| **Version** | `1.0.0` |
+| **Game** | Big Ambitions **EA 0.11** and **1.0 experimental** |
 | **Unity** | **2022.3.62f2** with [Big Ambitions Modding SDK](https://github.com/hovgaardgames/bigambitions) |
 | **Mod ID** | `LIB_BaPlayerLocation` |
 | **Assembly** | `LIB_BaPlayerLocation` |

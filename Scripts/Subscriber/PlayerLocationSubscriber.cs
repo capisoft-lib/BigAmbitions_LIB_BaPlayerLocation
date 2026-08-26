@@ -87,7 +87,7 @@ namespace BaPlayerLocation.Subscriber
             Reset();
             IsActive = true;
             FlushActiveCallbacks();
-            ModLog.Info("PlayerLocationSubscriber ready (LIB_BaPlayerLocation v0.11).");
+            ModLog.Info("PlayerLocationSubscriber ready (LIB_BaPlayerLocation v1.0.0).");
         }
 
         internal static void Shutdown()

@@ -12,7 +12,8 @@ namespace BaPlayerLocation.Subscriber
             var match = Regex.Match(
                 json ?? string.Empty,
                 "\"" + Regex.Escape(key) + "\"\\s*:\\s*(-?[0-9]+(?:\\.[0-9]+)?)",
-                RegexOptions.IgnoreCase);
+                RegexOptions.IgnoreCase,
+                TimeSpan.FromMilliseconds(250));
             if (!match.Success)
                 return false;
 

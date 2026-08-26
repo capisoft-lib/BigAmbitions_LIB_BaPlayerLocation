@@ -173,7 +173,7 @@ namespace BaPlayerLocation.Subscriber
                         return 0f;
 
                     forward.Normalize();
-                    return Mathf.Atan2(forward.x, forward.z) * Mathf.Rad2Deg;
+                    return Mathf.Atan2(forward.x, forward.z) * 57.29578f;
                 }
 
                 var player = GameManager.Instance?.playerController ?? PlayerHelper.PlayerController;
